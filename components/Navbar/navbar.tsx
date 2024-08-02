@@ -16,7 +16,6 @@ export default function NavBar() {
                     </div>
                     <div className="flex gap-5 justify-around">
                         <NavBarTheme />
-                        <NavBarAuthentication />
                     </div>
                 </div>
             </header>
