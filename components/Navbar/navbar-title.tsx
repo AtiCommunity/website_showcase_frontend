@@ -1,7 +1,7 @@
 import { akronim } from "@/styles/fonts";
 import Link from "next/link";
 
-export default function NavBarTitle() {
+const NavBarTitle = () => {
     return (
         <>
             <Link
@@ -12,4 +12,6 @@ export default function NavBarTitle() {
             </Link>
         </>
     );
-}
+};
+
+export default NavBarTitle;

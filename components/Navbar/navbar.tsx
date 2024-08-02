@@ -3,7 +3,7 @@ import NavBarLinks from "@/components/Navbar/navbar-links";
 import NavBarTheme from "@/components/Navbar/navbar-theme";
 import NavBarTitle from "@/components/Navbar/navbar-title";
 
-export default function NavBar() {
+const NavBar = () => {
     return (
         <>
             <header>
@@ -21,4 +21,6 @@ export default function NavBar() {
             </header>
         </>
     );
-}
+};
+
+export default NavBar;

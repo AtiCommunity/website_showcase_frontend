@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { FaSquareGithub } from "react-icons/fa6";
 
-export default function Footer() {
+const Footer = () => {
     return (
         <>
             <footer className="footer justify-around bg-base-100 text-base-content rounded p-10">
@@ -38,4 +38,6 @@ export default function Footer() {
             </footer>
         </>
     );
-}
+};
+
+export default Footer;

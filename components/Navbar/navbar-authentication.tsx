@@ -1,4 +1,4 @@
-export default function NavBarAuthentication() {
+const NavBarAuthentication = () => {
     return (
         <>
             <div className="dropdown dropdown-end">
@@ -34,4 +34,6 @@ export default function NavBarAuthentication() {
             </div>
         </>
     );
-}
+};
+
+export default NavBarAuthentication;

@@ -1,4 +1,4 @@
-export default function Content() {
+const Content = () => {
     return (
         <>
             <div className="hero bg-base-200 min-h-screen">
@@ -16,4 +16,6 @@ export default function Content() {
             </div>
         </>
     );
-}
+};
+
+export default Content;

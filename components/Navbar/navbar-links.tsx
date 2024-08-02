@@ -1,3 +1,5 @@
-export default function NavBarLinks() {
+const NavBarLinks = () => {
     return <></>;
-}
+};
+
+export default NavBarLinks;
