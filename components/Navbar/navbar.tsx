@@ -1,7 +1,7 @@
-import NavBarAuthentication from "@/components/navbar/navbar-authentication";
-import NavBarLinks from "@/components/navbar/navbar-links";
-import NavBarTheme from "./navbar-theme";
-import NavBarTitle from "@/components/navbar/navbar-title";
+import NavBarAuthentication from "@/components/Navbar/navbar-authentication";
+import NavBarLinks from "@/components/Navbar/navbar-links";
+import NavBarTheme from "@/components/Navbar/navbar-theme";
+import NavBarTitle from "@/components/Navbar/navbar-title";
 
 export default function NavBar() {
     return (
@@ -14,7 +14,7 @@ export default function NavBar() {
                     <div>
                         <NavBarLinks />
                     </div>
-                    <div>
+                    <div className="flex gap-5 justify-around">
                         <NavBarTheme />
                         <NavBarAuthentication />
                     </div>
