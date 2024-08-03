@@ -7,17 +7,17 @@ import Footer from "@/components/Footer/footer";
 import Content from "@/components/Content/content";
 
 const Home = () => {
-    const [theme, setTheme] = useState<string>("light");
+    const [theme, setTheme] = useState<string>("fantasy");
 
     useEffect(() => {
         const savedTheme =
-            document.cookie.replace(/theme=(.*)/, "$1") || "light";
+            document.cookie.replace(/theme=(.*)/, "$1") || "fantasy";
         setTheme(savedTheme);
         document.documentElement.setAttribute("data-theme", savedTheme);
     }, []);
 
     const toggleTheme = () => {
-        const newTheme = theme === "light" ? "dark" : "light";
+        const newTheme = theme === "fantasy" ? "luxury" : "fantasy";
         setTheme(newTheme);
         document.cookie = `theme=${newTheme}; max-age=${
             30 * 24 * 60 * 60

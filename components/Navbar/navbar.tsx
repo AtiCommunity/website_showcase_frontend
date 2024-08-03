@@ -10,15 +10,15 @@ interface NavBarProps {
 const NavBar: React.FC<NavBarProps> = ({ theme, toggleTheme }) => {
     return (
         <>
-            <header>
+            <header className="sticky top-0">
                 <div className="navbar bg-base-100 justify-around">
+                    <div className="lg:hidden">
+                        <NavBarLinks />
+                    </div>
                     <div>
                         <NavBarTitle />
                     </div>
                     <div>
-                        <NavBarLinks />
-                    </div>
-                    <div className="flex gap-5 justify-around">
                         <NavBarTheme theme={theme} toggleTheme={toggleTheme} />
                     </div>
                 </div>
