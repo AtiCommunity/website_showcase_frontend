@@ -1,9 +1,13 @@
-import NavBarAuthentication from "@/components/Navbar/navbar-authentication";
 import NavBarLinks from "@/components/Navbar/navbar-links";
 import NavBarTheme from "@/components/Navbar/navbar-theme";
 import NavBarTitle from "@/components/Navbar/navbar-title";
 
-const NavBar = () => {
+interface NavBarProps {
+    theme: string;
+    toggleTheme: () => void;
+}
+
+const NavBar: React.FC<NavBarProps> = ({ theme, toggleTheme }) => {
     return (
         <>
             <header>
@@ -15,7 +19,7 @@ const NavBar = () => {
                         <NavBarLinks />
                     </div>
                     <div className="flex gap-5 justify-around">
-                        <NavBarTheme />
+                        <NavBarTheme theme={theme} toggleTheme={toggleTheme} />
                     </div>
                 </div>
             </header>

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { cookies } from "next/headers";
 import { inter } from "@/styles/fonts";
+
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
@@ -7,13 +9,15 @@ export const metadata: Metadata = {
     description: "AtiCommunity project showcase",
 };
 
-const RootLayout = ({
-    children,
-}: Readonly<{
+type RootLayoutProps = {
     children: React.ReactNode;
-}>) => {
+};
+
+const RootLayout = ({ children }: RootLayoutProps) => {
+    const theme = cookies().get("theme")?.value || "light";
+
     return (
-        <html lang="en">
+        <html data-theme={theme} lang="en">
             <body className={inter.className}>{children}</body>
         </html>
     );

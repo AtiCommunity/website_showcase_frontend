@@ -1,25 +1,9 @@
-"use client";
+interface NavBarThemeProps {
+    theme: string;
+    toggleTheme: () => void;
+}
 
-import { getCookie, hasCookie, setCookie } from "cookies-next";
-import { useEffect, useState } from "react";
-
-const NavBarTheme = () => {
-    const [theme, setTheme] = useState("light");
-
-    useEffect(() => {
-        // Get the initial theme from the cookies or default to 'light'
-        const initialTheme = getCookie("theme") || "light";
-        setTheme(initialTheme);
-        document.documentElement.setAttribute("data-theme", initialTheme);
-    }, []);
-
-    const toggleTheme = () => {
-        const newTheme = theme === "light" ? "dark" : "light";
-        setTheme(newTheme);
-        setCookie("theme", newTheme, { maxAge: 30 * 24 * 60 * 60, path: "/" });
-        document.documentElement.setAttribute("data-theme", newTheme);
-    };
-
+const NavBarTheme: React.FC<NavBarThemeProps> = ({ theme, toggleTheme }) => {
     return (
         <label className="swap swap-rotate">
             <input
@@ -27,6 +11,9 @@ const NavBarTheme = () => {
                 className="theme-controller"
                 checked={theme === "dark"}
                 onChange={toggleTheme}
+                onClick={() => {
+                    console.log(theme);
+                }}
             />
 
             {/* Sun Icon (Light Mode) */}
