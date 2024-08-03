@@ -5,7 +5,7 @@ const NavBarTitle = () => {
     return (
         <>
             <Link
-                className={`${akronim.className} btn btn-ghost text-4xl hover:bg-transparent hover:text-primary`}
+                className={`${akronim.className} btn btn-ghost font-normal text-4xl hover:bg-transparent hover:text-primary`}
                 href="/"
             >
                 AtiCommunity
