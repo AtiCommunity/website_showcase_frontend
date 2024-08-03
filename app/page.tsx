@@ -38,8 +38,7 @@ const Home = () => {
                         </h1>
                         <p className="py-6">
                             This website is a project showcase. Here is exposed
-                            every funny projects I've made alone or with my
-                            organization.
+                            every funny projects I&apos;ve made.
                         </p>
                         <button className="btn btn-primary">Get Started</button>
                     </div>
