@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import { GiCrownedSkull } from "react-icons/gi";
 
 const Footer = () => {

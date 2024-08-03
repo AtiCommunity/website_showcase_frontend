@@ -4,7 +4,9 @@ import { useEffect, useState } from "react";
 
 import NavBar from "@/components/Navbar/navbar";
 import Footer from "@/components/Footer/footer";
-import Content from "@/components/Content/content";
+import ProfileCard from "@/components/ProfileCard/profilecard";
+
+import { nabla } from "@/styles/fonts";
 
 const Home = () => {
     const [theme, setTheme] = useState<string>("fantasy");
@@ -28,7 +30,22 @@ const Home = () => {
     return (
         <>
             <NavBar theme={theme} toggleTheme={toggleTheme} />
-            <Content />
+            <div className="min-h-screen max-w-screen content-center">
+                <div className="flex w-full flex-col lg:flex-row py-10">
+                    <div className="container mx-auto max-w-md text-center content-center">
+                        <h1 className={`${nabla.className} text-7xl font-bold`}>
+                            Hello there
+                        </h1>
+                        <p className="py-6">
+                            This website is a project showcase. Here is exposed
+                            every project I made alone or with my orguanization.
+                        </p>
+                        <button className="btn btn-primary">Get Started</button>
+                    </div>
+                    <div className="divider lg:divider-horizontal"></div>
+                    <ProfileCard />
+                </div>
+            </div>
             <Footer />
         </>
     );

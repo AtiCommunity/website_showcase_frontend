@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
-import { inter } from "@/styles/fonts";
+import { koho } from "@/styles/fonts";
 
 import "@/styles/globals.css";
 
@@ -18,7 +18,9 @@ const RootLayout = ({ children }: RootLayoutProps) => {
 
     return (
         <html data-theme={theme} lang="en">
-            <body className={inter.className}>{children}</body>
+            <body className={`${koho.className} bg-base-200 min-h-screen`}>
+                {children}
+            </body>
         </html>
     );
 };
