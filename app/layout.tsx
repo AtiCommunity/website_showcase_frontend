@@ -4,8 +4,8 @@ import { cookies } from "next/headers";
 import { koho } from "@/styles/fonts";
 import "@/styles/globals.css";
 
-import NavBar from "@/components/Navbar/navbar";
-import Footer from "@/components/Footer/footer";
+import NavBar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
     title: "AtiCommunity",
@@ -21,7 +21,7 @@ const Layout = ({ children }: LayoutProps) => {
 
     return (
         <html data-theme={theme} lang="en">
-            <body className={`${koho.className} bg-base-200 min-h-screen`}>
+            <body className={`${koho.className}`}>
                 <NavBar />
                 {children}
                 <Footer />

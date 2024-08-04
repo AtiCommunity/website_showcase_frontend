@@ -6,11 +6,11 @@ import profilePic from "@/public/profile.jpg";
 const ProfileCard = () => {
     return (
         <>
-            <div className="bg-blue-900 text-amber-400 mx-auto max-w-md card glass w-72">
+            <div className="card glass w-72 max-w-md bg-blue-900 text-amber-400 mx-auto">
                 <figure>
                     <Image src={profilePic} alt="profile" />
                 </figure>
-                <div className="card-body px-6 py-2">
+                <div className="card-body px-6 py-4">
                     <h2 className="card-title">Antoine (Atineon) ROBIN</h2>
                     <p>
                         IT Engineer{" "}
