@@ -1,12 +1,7 @@
 import NavBarTheme from "@/components/Navbar/navbar-theme";
 import NavBarTitle from "@/components/Navbar/navbar-title";
 
-interface NavBarProps {
-    theme: string;
-    toggleTheme: () => void;
-}
-
-const NavBar: React.FC<NavBarProps> = ({ theme, toggleTheme }) => {
+const NavBar = () => {
     return (
         <>
             <header className="sticky top-0 z-40">
@@ -15,7 +10,7 @@ const NavBar: React.FC<NavBarProps> = ({ theme, toggleTheme }) => {
                         <NavBarTitle />
                     </div>
                     <div>
-                        <NavBarTheme theme={theme} toggleTheme={toggleTheme} />
+                        <NavBarTheme />
                     </div>
                 </div>
             </header>

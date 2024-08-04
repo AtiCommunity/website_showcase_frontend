@@ -1,3 +1,5 @@
+"use client";
+
 import { akronim, honk } from "@/styles/fonts";
 import { GiCrownedSkull } from "react-icons/gi";
 

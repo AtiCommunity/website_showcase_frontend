@@ -1,5 +1,6 @@
-import { akronim } from "@/styles/fonts";
 import Link from "next/link";
+
+import { akronim } from "@/styles/fonts";
 
 const NavBarTitle = () => {
     return (

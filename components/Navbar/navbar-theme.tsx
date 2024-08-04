@@ -1,9 +1,26 @@
-interface NavBarThemeProps {
-    theme: string;
-    toggleTheme: () => void;
-}
+"use client";
 
-const NavBarTheme: React.FC<NavBarThemeProps> = ({ theme, toggleTheme }) => {
+import { useEffect, useState } from "react";
+
+const NavBarTheme = () => {
+    const [theme, setTheme] = useState<string>("bumblebee");
+
+    useEffect(() => {
+        const savedTheme =
+            document.cookie.replace(/theme=(.*)/, "$1") || "bumblebee";
+        setTheme(savedTheme);
+        document.documentElement.setAttribute("data-theme", savedTheme);
+    }, []);
+
+    const toggleTheme = () => {
+        const newTheme = theme === "bumblebee" ? "luxury" : "bumblebee";
+        setTheme(newTheme);
+        document.cookie = `theme=${newTheme}; max-age=${
+            30 * 24 * 60 * 60
+        }; path=/`;
+        document.documentElement.setAttribute("data-theme", newTheme);
+    };
+
     return (
         <label className="btn btn-ghost swap swap-rotate hover:bg-transparent hover:text-primary">
             <input

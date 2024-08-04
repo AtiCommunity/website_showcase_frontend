@@ -1,6 +1,7 @@
 import Image from "next/image";
-import profilePic from "@/public/profile.jpg";
 import Link from "next/link";
+
+import profilePic from "@/public/profile.jpg";
 
 const ProfileCard = () => {
     return (
