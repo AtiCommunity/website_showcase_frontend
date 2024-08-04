@@ -9,17 +9,17 @@ import ProfileCard from "@/components/ProfileCard/profilecard";
 import { nabla } from "@/styles/fonts";
 
 const Home = () => {
-    const [theme, setTheme] = useState<string>("fantasy");
+    const [theme, setTheme] = useState<string>("bumblebee");
 
     useEffect(() => {
         const savedTheme =
-            document.cookie.replace(/theme=(.*)/, "$1") || "fantasy";
+            document.cookie.replace(/theme=(.*)/, "$1") || "bumblebee";
         setTheme(savedTheme);
         document.documentElement.setAttribute("data-theme", savedTheme);
     }, []);
 
     const toggleTheme = () => {
-        const newTheme = theme === "fantasy" ? "luxury" : "fantasy";
+        const newTheme = theme === "bumblebee" ? "luxury" : "bumblebee";
         setTheme(newTheme);
         document.cookie = `theme=${newTheme}; max-age=${
             30 * 24 * 60 * 60

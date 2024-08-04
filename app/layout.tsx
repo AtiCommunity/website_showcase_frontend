@@ -14,7 +14,7 @@ type RootLayoutProps = {
 };
 
 const RootLayout = ({ children }: RootLayoutProps) => {
-    const theme = cookies().get("theme")?.value || "fantasy";
+    const theme = cookies().get("theme")?.value || "bumblebee";
 
     return (
         <html data-theme={theme} lang="en">
