@@ -9,7 +9,9 @@ const Footer = () => {
                     <button
                         className="btn btn-ghost hover:bg-transparent p-0"
                         onClick={() => {
-                            const secret = document.getElementById("secret");
+                            const secret = document.getElementById(
+                                "secret"
+                            ) as HTMLDialogElement;
                             if (secret) {
                                 const infiniteCloseButton =
                                     document.getElementById(
@@ -68,7 +70,7 @@ const Footer = () => {
                                 Oh no!
                             </h3>
                             <p className="py-4">
-                                You found my secret! I&apos;m lost!
+                                You&apos;ve found my secret! I&apos;m lost!
                                 NOOOOOOoooooo...
                             </p>
                             <p>
