@@ -54,7 +54,7 @@ const ShowcaseCarousel = () => {
                             </h2>
                             <p>
                                 Backend API where is stored all the data for the
-                                backend.
+                                frontend.
                             </p>
                             <div className="card-actions justify-center">
                                 <Link
